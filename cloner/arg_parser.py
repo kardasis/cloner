@@ -12,7 +12,8 @@ class ArgParser:
 
     def parse_args(self, args):
         if len(args) == 2:
-            self.url = f'git@github.com:{args[0]}/{args[1]}.git'
+            self.user_name = args[0]
+            self.repo_name = args[1]
 
         if len(args) == 1:
             http_url = args[0]
@@ -23,3 +24,7 @@ class ArgParser:
                 path_components.append(tail)
             self.user_name = path_components[-1]
             self.repo_name = path_components[-2]
+
+    @property
+    def url(self):
+        return f'git@github.com:{self.user_name}/{self.repo_name}.git'
