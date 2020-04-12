@@ -1,13 +1,7 @@
 import click
 import os
 
-
-class Cli:
-    def __init__(self, args):
-        if len(args) == 0:
-            raise ClonerException('Must provide at least one argument')
-        if len(args) > 2:
-            raise ClonerException('Too many arguments')
+from cloner.arg_parser import ArgParser
 
 
 class ClonerException(click.ClickException):
@@ -21,7 +15,7 @@ def main(args):
     if cloner_path is None:
         msg = 'CLONER_PATH environment variable must be defined'
         raise click.ClonerException(msg)
-    cli = Cli(args)
+    cli = ArgParser(args)
 
 
 if __name__ == '__main__':
