@@ -16,3 +16,8 @@ def test_three_args():
 def test_username_reponame_args():
     ap = ArgParser(['kardasis', 'cloner'])
     assert ap.url == 'git@github.com:kardasis/cloner.git'
+
+
+def test_root_url_args():
+    ap = ArgParser(['https://github.com/kardasis/cloner'])
+    assert ap.url == 'git@github.com:kardasis/cloner.git'
