@@ -15,7 +15,7 @@ def main(args):
     if cloner_path is None:
         msg = 'CLONER_PATH environment variable must be defined'
         raise click.ClonerException(msg)
-    cli = ArgParser(args)
+    ArgParser(args)
 
 
 if __name__ == '__main__':

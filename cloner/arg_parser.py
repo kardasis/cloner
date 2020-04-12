@@ -7,5 +7,6 @@ class ArgParser:
         self.set_url(args)
 
     def set_url(self, args):
-        pass
+        if len(args) == 2:
+            self.url = f'git@github.com:{args[0]}/{args[1]}.git'
 
