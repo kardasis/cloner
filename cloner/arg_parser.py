@@ -28,3 +28,7 @@ class ArgParser:
     @property
     def url(self):
         return f'git@github.com:{self.user_name}/{self.repo_name}.git'
+
+    @property
+    def local_path_tail(self):
+        return f'{self.user_name}/{self.repo_name}'

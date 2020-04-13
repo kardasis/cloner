@@ -34,3 +34,8 @@ def test_deep_url_args():
 def test_get_git_uri():
     ap = ArgParser(['kardasis', 'cloner'])
     assert ap.url == 'git@github.com:kardasis/cloner.git'
+
+
+def test_local_path():
+    ap = ArgParser(['kardasis', 'cloner'])
+    assert ap.local_path_tail == 'kardasis/cloner'
