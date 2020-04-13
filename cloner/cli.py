@@ -1,5 +1,6 @@
 import click
 import os
+import subprocess
 
 from cloner.arg_parser import ArgParser
 
@@ -15,7 +16,10 @@ def main(args):
     if cloner_path is None:
         msg = 'CLONER_PATH environment variable must be defined'
         raise click.ClonerException(msg)
-    ArgParser(args)
+    cloner_path =  os.path.expanduser(cloner_path)
+    ap = ArgParser(args)
+    local_path = os.path.join(cloner_path, ap.local_path_tail)
+    subprocess.call(["git", "clone", ap.url, local_path])
 
 
 if __name__ == '__main__':
