@@ -2,7 +2,9 @@
 
 ## Usage
 Set your local repo directory via the CLONER_PATH environment variable
-`echo "export CLONER_PATH=\"~/repos\"" >> ~/.bash_profile`
+``` bash
+echo "export CLONER_PATH=\"~/repos\"" >> ~/.bash_profile
+```
 
 Then you can clone any github repo into that directory with the username and repo name, like this:
 ``` bash
