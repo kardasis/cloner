@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="cloner",
-    version="1.0.2",
+    version="1.0.3",
     author="Ari Kardasis",
     author_email="ari.kardasis@gmail.com",
     description='A tiny utility for cloning github repos',
