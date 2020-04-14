@@ -1,7 +1,15 @@
-# A tiny utility to quickly clone github repos
+# Clone fast.  Clone often
+Cloner makes local cloning fast and organized.
+
+## Installation
+
+```bash
+pip install cloner
+```
 
 ## Usage
 Set your local repo directory via the CLONER_PATH environment variable
+
 ``` bash
 echo "export CLONER_PATH=\"~/repos\"" >> ~/.bash_profile
 ```
