@@ -1,4 +1,4 @@
 
         [console_scripts]
-        cloner=cloner:cli
+        cloner=cloner.cli:cli
     
